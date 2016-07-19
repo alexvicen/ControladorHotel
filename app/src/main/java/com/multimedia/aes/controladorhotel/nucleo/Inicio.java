@@ -2,6 +2,8 @@ package com.multimedia.aes.controladorhotel.nucleo;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 import com.multimedia.aes.controladorhotel.R;
+import com.multimedia.aes.controladorhotel.fragment.FragmentHotel;
 
 public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,7 +33,17 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        llInflar = (LinearLayout) findViewById(R.id.llInflar);
+        Class fragmentClass = FragmentHotel.class;
+        Fragment fragment;
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.llInflar, fragment).commit();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
