@@ -6,43 +6,296 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="10dp"></LinearLayout>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/cama_verde" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_margin="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Disponible"
+            android:id="@+id/txtDisponible"
+            android:textSize="15dp" />
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView3"
+            android:src="@drawable/cama_roja" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ocupada"
+            android:id="@+id/txtOcupada"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView4"
+            android:src="@drawable/cama_amarilla" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Reservada"
+            android:id="@+id/txtReservada"
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="2">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll1Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Primera"
+                        android:id="@+id/txt1Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv1Reserva"
+                        android:src="@drawable/cama_amarilla" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll2Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Segunda"
+                        android:id="@+id/txt2Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv2Reserva"
+                        android:src="@drawable/cama_verde" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll3Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Tercera"
+                        android:id="@+id/txt3Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv3Reserva"
+                        android:src="@drawable/cama_roja" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll4Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Cuarta"
+                        android:id="@+id/txt4Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv4Reserva"
+                        android:src="@drawable/cama_roja" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll5Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Quinta"
+                        android:id="@+id/txt5Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv5Reserva"
+                        android:src="@drawable/cama_verde" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll6Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Sexta"
+                        android:id="@+id/txt6Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv6Reserva"
+                        android:src="@drawable/cama_roja" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll7Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Septima"
+                        android:id="@+id/txt7Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv7Reserva"
+                        android:src="@drawable/cama_verde" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/borde_layout_reserva"
+                    android:gravity="center"
+                    android:id="@+id/ll8Reserva">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Octava"
+                        android:id="@+id/txt8Reserva"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv8Reserva"
+                        android:src="@drawable/cama_amarilla" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>
