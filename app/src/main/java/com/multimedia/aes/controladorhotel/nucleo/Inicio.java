@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.multimedia.aes.controladorhotel.R;
 import com.multimedia.aes.controladorhotel.fragment.FragmentHotel;
+import com.multimedia.aes.controladorhotel.fragment.FragmentReservar;
 
 public class Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -61,11 +62,30 @@ public class Inicio extends AppCompatActivity implements NavigationView.OnNaviga
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-
-        } else if (id == R.id.nav_gallery) {
-
+        if (id == R.id.habitaciones) {
+            Class fragmentClass = FragmentHotel.class;
+            Fragment fragment;
+            try {
+                fragment = (Fragment) fragmentClass.newInstance();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.llInflar, fragment).commit();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        } else if (id == R.id.reservar) {
+            Class fragmentClass = FragmentReservar.class;
+            Fragment fragment;
+            try {
+                fragment = (Fragment) fragmentClass.newInstance();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.llInflar, fragment).commit();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {

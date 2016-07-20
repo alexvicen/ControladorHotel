@@ -33,7 +33,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Primera"
-                        android:id="@+id/textView" />
+                        android:id="@+id/txtPrimera" />
 
                     <ImageView
                         android:layout_width="150dp"
@@ -57,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Segunda"
-                        android:id="@+id/textView2" />
+                        android:id="@+id/txtSegunda" />
 
                     <ImageView
                         android:layout_width="150dp"
@@ -88,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Tercera"
-                        android:id="@+id/textView3" />
+                        android:id="@+id/txtTercera" />
 
                     <ImageView
                         android:layout_width="150dp"
@@ -112,7 +112,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Cuarta"
-                        android:id="@+id/textView4" />
+                        android:id="@+id/txtCuarta" />
 
                     <ImageView
                         android:layout_width="150dp"
@@ -142,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Quinta"
-                        android:id="@+id/textView5" />
+                        android:id="@+id/txtQuinta" />
 
                     <ImageView
                         android:layout_width="150dp"
@@ -166,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Sexta"
-                        android:id="@+id/textView6" />
+                        android:id="@+id/txtSexta" />
 
                     <ImageView
                         android:layout_width="150dp"

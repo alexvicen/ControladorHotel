@@ -3,11 +3,11 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:title="Import" />
+            android:id="@+id/habitaciones"
+            android:title="Habitaciones" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="Gallery" />
+            android:id="@+id/reservar"
+            android:title="Reservar" />
         <item
             android:id="@+id/nav_slideshow"
             android:title="Slideshow" />
