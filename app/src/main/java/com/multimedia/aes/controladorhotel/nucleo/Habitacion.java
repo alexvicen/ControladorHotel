@@ -22,10 +22,12 @@ public class Habitacion extends AppCompatActivity implements View.OnClickListene
     private int imageSwitcherImages[] = {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4, R.drawable.img5, R.drawable.img6,};
     private int switcherImage = imageSwitcherImages.length;
     private int counter = 0;
+    private int habitacion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.habitacion);
+        habitacion = getIntent().getIntExtra("habitacion",0);
         btnAnterior=(Button)findViewById(R.id.btnAnterior);
         btnSiguiente=(Button)findViewById(R.id.btnSiguiente);
         txt1 = (TextView)findViewById(R.id.txt1);

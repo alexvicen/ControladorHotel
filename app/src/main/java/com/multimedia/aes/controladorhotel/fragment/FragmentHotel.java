@@ -25,18 +25,22 @@ public class FragmentHotel extends Fragment implements View.OnClickListener {
         vista = inflater.inflate(R.layout.fragment_hotel, container, false);
         LinearLayout llPrimero, llSegundo, llTercero, llCuarto, llQuinto, llSexto;
         TextView txtPrimera, txtSegunda, txtTercera, txtCuarta, txtQuinta, txtSexta;
+        Typeface miPropiaTypeFace = Typeface.createFromAsset(getContext().getAssets(), "font/CloisterBlack.ttf");
+
         llPrimero = (LinearLayout) vista.findViewById(R.id.llPrimero);
         llSegundo = (LinearLayout) vista.findViewById(R.id.llSegundo);
         llTercero = (LinearLayout) vista.findViewById(R.id.llTercero);
         llCuarto = (LinearLayout) vista.findViewById(R.id.llCuarto);
         llQuinto = (LinearLayout) vista.findViewById(R.id.llQuinto);
         llSexto = (LinearLayout) vista.findViewById(R.id.llSexto);
+
         txtPrimera = (TextView) vista.findViewById(R.id.txtPrimera);
         txtSegunda = (TextView) vista.findViewById(R.id.txtSegunda);
         txtTercera = (TextView) vista.findViewById(R.id.txtTercera);
         txtCuarta = (TextView) vista.findViewById(R.id.txtCuarta);
         txtQuinta = (TextView) vista.findViewById(R.id.txtQuinta);
         txtSexta = (TextView) vista.findViewById(R.id.txtSexta);
+
         llPrimero.setOnClickListener(this);
         llSegundo.setOnClickListener(this);
         llTercero.setOnClickListener(this);
@@ -44,7 +48,7 @@ public class FragmentHotel extends Fragment implements View.OnClickListener {
         llQuinto.setOnClickListener(this);
         llSexto.setOnClickListener(this);
 
-        Typeface miPropiaTypeFace = Typeface.createFromAsset(getContext().getAssets(), "font/CloisterBlack.ttf");
+
         txtPrimera.setTypeface(miPropiaTypeFace);
         txtSegunda.setTypeface(miPropiaTypeFace);
         txtTercera.setTypeface(miPropiaTypeFace);
@@ -57,6 +61,19 @@ public class FragmentHotel extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         Intent i = new Intent(getContext(), Habitacion.class);
+        if (view.getId()==R.id.llPrimero){
+            i.putExtra("habitacion",1);
+        }else if (view.getId()==R.id.llSegundo){
+            i.putExtra("habitacion",2);
+        }else if (view.getId()==R.id.llTercero){
+            i.putExtra("habitacion",3);
+        }else if (view.getId()==R.id.llCuarto){
+            i.putExtra("habitacion",4);
+        }else if (view.getId()==R.id.llQuinto){
+            i.putExtra("habitacion",5);
+        }else if (view.getId()==R.id.llSexto){
+
+        }
         getContext().startActivity(i);
     }
 }
