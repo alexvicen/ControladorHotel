@@ -13,6 +13,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Habitaciones"
+                android:id="@+id/txtHabitaciones"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp" />
+
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -32,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Primera"
+                        android:text="Enero"
                         android:id="@+id/txtPrimera" />
 
                     <ImageView
@@ -56,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Segunda"
+                        android:text="Febrero"
                         android:id="@+id/txtSegunda" />
 
                     <ImageView
@@ -87,7 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Tercera"
+                        android:text="Marzo"
                         android:id="@+id/txtTercera" />
 
                     <ImageView
@@ -111,7 +120,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Cuarta"
+                        android:text="Abril"
                         android:id="@+id/txtCuarta" />
 
                     <ImageView
@@ -141,7 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Quinta"
+                        android:text="Mayo"
                         android:id="@+id/txtQuinta" />
 
                     <ImageView
@@ -165,7 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Sexta"
+                        android:text="Junio"
                         android:id="@+id/txtSexta" />
 
                     <ImageView
