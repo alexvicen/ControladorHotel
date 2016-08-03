@@ -1,5 +1,4 @@
 package com.multimedia.aes.controladorhotel.fragment;
-
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -35,6 +34,14 @@ public class FragmentReservar extends Fragment{
         txtDia5 = (TextView) vista.findViewById(R.id.txtDia5);
         txtDia6 = (TextView) vista.findViewById(R.id.txtDia6);
         txtDia7 = (TextView) vista.findViewById(R.id.txtDia7);
+        txtFecha.setTypeface(miPropiaTypeFace);
+        txtDia1.setTypeface(miPropiaTypeFace);
+        txtDia2.setTypeface(miPropiaTypeFace);
+        txtDia3.setTypeface(miPropiaTypeFace);
+        txtDia4.setTypeface(miPropiaTypeFace);
+        txtDia5.setTypeface(miPropiaTypeFace);
+        txtDia6.setTypeface(miPropiaTypeFace);
+        txtDia7.setTypeface(miPropiaTypeFace);
         Date date = new Date(dpFecha.getYear(),dpFecha.getMonth(),dpFecha.getDayOfMonth());
         cambiarSemana(date);
         dpFecha.init(dpFecha.getYear(), dpFecha.getMonth(), dpFecha.getDayOfMonth(), new DatePicker.OnDateChangedListener() {
