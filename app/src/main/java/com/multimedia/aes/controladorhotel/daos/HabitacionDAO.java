@@ -19,8 +19,8 @@ public class HabitacionDAO extends DBHelperMOS {
 
 	//__________FUNCIONES DE CREACIÓN________________________//
 
-	public static boolean newHabitacion(Context context) {
-		Habitacion h = montarHabitacion();
+	public static boolean newHabitacion(Context context, int id_habitacion, String nombre_habitacion, String fecha_reserva, String imagen1, String imagen2, String imagen3, String imagen4, String imagen6, String imagen5) {
+		Habitacion h = montarHabitacion(id_habitacion, nombre_habitacion, fecha_reserva, imagen1, imagen2, imagen3, imagen4, imagen6, imagen5);
 		return crearHabitacion(h,context);
 	}
 	public static boolean crearHabitacion(Habitacion h,Context context) {
@@ -33,8 +33,8 @@ public class HabitacionDAO extends DBHelperMOS {
 			return false;
 		}
 	}
-	public static Habitacion montarHabitacion() {
-		Habitacion h =new Habitacion();
+	public static Habitacion montarHabitacion(int id_habitacion, String nombre_habitacion, String fecha_reserva, String imagen1, String imagen2, String imagen3, String imagen4, String imagen6, String imagen5) {
+		Habitacion h =new Habitacion(id_habitacion, nombre_habitacion, fecha_reserva, imagen1, imagen2, imagen3, imagen4, imagen6, imagen5);
 		return h;
 	}
 

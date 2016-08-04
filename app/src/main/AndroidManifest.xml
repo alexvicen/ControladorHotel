@@ -11,6 +11,7 @@
         <activity
             android:name=".nucleo.Inicio"
             android:label="@string/title_activity_inicio"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".nucleo.Habitacion" >
+        <activity android:name=".nucleo.Habitacion"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

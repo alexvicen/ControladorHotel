@@ -155,11 +155,11 @@ public class FragmentReservar extends Fragment{
         txt116 = (TextView) vista.findViewById(R.id.txt116);
         txt117 = (TextView) vista.findViewById(R.id.txt117);
     }
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void cambiarSemana(Date d){
         Calendar c = Calendar.getInstance();
         c.setTime(d);
         switch (c.get(Calendar.DAY_OF_WEEK)){
+            //SABADO
             case 1:
                 int a = -5;
                 for (int j = 0;j<semana.length;j++){
@@ -168,19 +168,9 @@ public class FragmentReservar extends Fragment{
                     semana[j] = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
                     a++;
                 }
-                txt06.setElevation(1);
-                txt16.setElevation(1);
-                txt26.setElevation(1);
-                txt36.setElevation(1);
-                txt46.setElevation(1);
-                txt56.setElevation(1);
-                txt66.setElevation(1);
-                txt76.setElevation(1);
-                txt86.setElevation(1);
-                txt96.setElevation(1);
-                txt106.setElevation(1);
-                txt116.setElevation(1);
+
                 break;
+            //DOMINGO
             case 2:
                 a = -6;
                 for (int j = 0;j<7;j++){
@@ -190,6 +180,7 @@ public class FragmentReservar extends Fragment{
                     a++;
                 }
                 break;
+            //LUNES
             case 3:
                 a = 0;
                 for (int j = 0;j<7;j++){
@@ -199,6 +190,7 @@ public class FragmentReservar extends Fragment{
                     a++;
                 }
                 break;
+            //MARTES
             case 4:
                 a = -1;
                 for (int j = 0;j<7;j++){
@@ -208,6 +200,7 @@ public class FragmentReservar extends Fragment{
                     a++;
                 }
                 break;
+            //MIERCOLES
             case 5:
                 a = -2;
                 for (int j = 0;j<7;j++){
@@ -217,6 +210,7 @@ public class FragmentReservar extends Fragment{
                     a++;
                 }
                 break;
+            //JUEVES
             case 6:
                 a = -3;
                 for (int j = 0;j<7;j++){
@@ -226,6 +220,7 @@ public class FragmentReservar extends Fragment{
                     a++;
                 }
                 break;
+            //VIERNES
             case 7:
                 a = -4;
                 for (int j = 0;j<7;j++){
@@ -243,7 +238,7 @@ public class FragmentReservar extends Fragment{
         txtDia5.setText(semana[4]+"\n"+"VIERNES");
         txtDia6.setText(semana[5]+"\n"+"SABADO");
         txtDia7.setText(semana[6]+"\n"+"DOMINGO");
-        txtFecha.setText(d.getDay()+"/"+d.getMonth()+"/"+d.getYear());
+        txtFecha.setText(dpFecha.getDayOfMonth()+"/"+dpFecha.getMonth()+"/"+ dpFecha.getYear());
     }
     private void cambiarTipoLetra(){
         Typeface miPropiaTypeFace = Typeface.createFromAsset(getContext().getAssets(), "font/CloisterBlack.ttf");

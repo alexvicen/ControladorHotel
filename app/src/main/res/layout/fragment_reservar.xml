@@ -42,7 +42,7 @@
                         android:background="#CBB49A">
 
                         <TextView
-                            android:layout_width="50dp"
+                            android:layout_width="60dp"
                             android:layout_height="match_parent"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="1"
@@ -132,7 +132,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -141,7 +143,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación ENERO"
@@ -150,7 +152,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView"
                                 android:src="@drawable/ajustes" />
@@ -165,8 +167,7 @@
                             android:textSize="10dp"
                             android:gravity="center"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:background="@drawable/libre" />
+                            android:paddingRight="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -177,8 +178,7 @@
                             android:textSize="10dp"
                             android:gravity="center"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:background="@drawable/libre_ocupada" />
+                            android:paddingRight="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -189,8 +189,7 @@
                             android:textSize="10dp"
                             android:gravity="center"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:background="@drawable/ocupada_reservada" />
+                            android:paddingRight="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -201,8 +200,7 @@
                             android:textSize="10dp"
                             android:gravity="center"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:background="@drawable/reservada_ocupada" />
+                            android:paddingRight="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -213,8 +211,7 @@
                             android:textSize="10dp"
                             android:gravity="center"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:background="@drawable/ocupada_libre" />
+                            android:paddingRight="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -225,8 +222,7 @@
                             android:textSize="10dp"
                             android:gravity="center"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:background="@drawable/libre_reservada" />
+                            android:paddingRight="10dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -238,14 +234,15 @@
                             android:gravity="center"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:autoText="false"
-                            android:background="@drawable/reservada_libre" />
+                            android:autoText="false" />
 
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -254,7 +251,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación FEBRERO"
@@ -263,7 +260,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView2"
                                 android:src="@drawable/ajustes" />
@@ -349,7 +346,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -358,7 +357,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación MARZO"
@@ -367,7 +366,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView3"
                                 android:src="@drawable/ajustes" />
@@ -453,7 +452,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -462,7 +463,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación ABRIL"
@@ -471,7 +472,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView4"
                                 android:src="@drawable/ajustes" />
@@ -557,7 +558,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -566,7 +569,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación MAYO"
@@ -575,7 +578,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView5"
                                 android:src="@drawable/ajustes" />
@@ -661,7 +664,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -670,7 +675,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación JUNIO"
@@ -679,7 +684,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView6"
                                 android:src="@drawable/ajustes" />
@@ -765,7 +770,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -774,7 +781,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación JULIO"
@@ -783,7 +790,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView7"
                                 android:src="@drawable/ajustes" />
@@ -869,7 +876,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -878,7 +887,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación AGOSTO"
@@ -887,7 +896,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView8"
                                 android:src="@drawable/ajustes" />
@@ -973,7 +982,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -982,7 +993,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación SEPTIEMBRE"
@@ -991,7 +1002,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView9"
                                 android:src="@drawable/ajustes" />
@@ -1077,7 +1088,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -1086,7 +1099,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación OCTUBRE"
@@ -1095,7 +1108,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView10"
                                 android:src="@drawable/ajustes" />
@@ -1181,7 +1194,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -1190,7 +1205,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación NOVIEMBRE"
@@ -1199,7 +1214,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView11"
                                 android:src="@drawable/ajustes" />
@@ -1285,7 +1300,9 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="2.5dp"
+                        android:layout_marginBottom="2.5dp">
 
                         <LinearLayout
                             android:orientation="vertical"
@@ -1294,7 +1311,7 @@
                             android:background="#CBB49A">
 
                             <TextView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="Habitación DICIEMBRE"
@@ -1303,7 +1320,7 @@
                                 android:gravity="center" />
 
                             <ImageView
-                                android:layout_width="50dp"
+                                android:layout_width="60dp"
                                 android:layout_height="30dp"
                                 android:id="@+id/imageView12"
                                 android:src="@drawable/ajustes" />
