@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".nucleo.Habitacion"
+        <activity android:name=".nucleo.Habitaciones"
             android:screenOrientation="portrait">
         </activity>
     </application>

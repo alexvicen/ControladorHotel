@@ -15,7 +15,7 @@ import android.widget.ViewSwitcher;
 
 import com.multimedia.aes.controladorhotel.R;
 
-public class Habitacion extends AppCompatActivity implements View.OnClickListener {
+public class Habitaciones extends AppCompatActivity implements View.OnClickListener {
     private ImageSwitcher iswHabitacion;
     private Button btnSiguiente,btnAnterior;
     private TextView txt1,txt2;
