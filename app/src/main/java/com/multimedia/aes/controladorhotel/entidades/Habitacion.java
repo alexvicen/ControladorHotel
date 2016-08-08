@@ -9,6 +9,7 @@ public class Habitacion {
     public static final String ID_HABITACION = "_id_habitacion";
     public static final String NOMBRE_HABITACION = "nombre_habitacion";
     public static final String FECHA_RESERVA = "fecha_reserva";
+    public static final String DESCRIPCION = "descripcion";
     public static final String IMAGEN1 = "imagen1";
     public static final String IMAGEN2 = "imagen2";
     public static final String IMAGEN3 = "imagen3";
@@ -23,6 +24,8 @@ public class Habitacion {
     private String nombre_habitacion;
     @DatabaseField(columnName = FECHA_RESERVA)
     private String fecha_reserva;
+    @DatabaseField(columnName = DESCRIPCION)
+    private String descripcion;
     @DatabaseField(columnName = IMAGEN1)
     private String imagen1;
     @DatabaseField(columnName = IMAGEN2)
@@ -37,10 +40,11 @@ public class Habitacion {
     private String imagen6;
 
     public Habitacion(){}
-    public Habitacion(int id_habitacion, String nombre_habitacion, String fecha_reserva, String imagen1, String imagen2, String imagen3, String imagen4, String imagen6, String imagen5) {
+    public Habitacion(int id_habitacion, String nombre_habitacion, String fecha_reserva, String descripcion, String imagen1, String imagen2, String imagen3, String imagen4, String imagen6, String imagen5) {
         this.id_habitacion = id_habitacion;
         this.nombre_habitacion = nombre_habitacion;
         this.fecha_reserva = fecha_reserva;
+        this.descripcion = descripcion;
         this.imagen1 = imagen1;
         this.imagen2 = imagen2;
         this.imagen3 = imagen3;
@@ -66,6 +70,12 @@ public class Habitacion {
     }
     public void setFecha_reserva(String fecha_reserva) {
         this.fecha_reserva = fecha_reserva;
+    }
+    public String getDescripcion() {
+        return descripcion;
+    }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
     public String getImagen1() {
         return imagen1;

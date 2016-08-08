@@ -47,17 +47,29 @@ public class FragmentHotel extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         Intent i = new Intent(getContext(), Habitaciones.class);
         if (view.getId()==R.id.llPrimero){
-            i.putExtra("habitacion",1);
+            i.putExtra("habitacion",0);
         }else if (view.getId()==R.id.llSegundo){
-            i.putExtra("habitacion",2);
+            i.putExtra("habitacion",1);
         }else if (view.getId()==R.id.llTercero){
-            i.putExtra("habitacion",3);
+            i.putExtra("habitacion",2);
         }else if (view.getId()==R.id.llCuarto){
-            i.putExtra("habitacion",4);
+            i.putExtra("habitacion",3);
         }else if (view.getId()==R.id.llQuinto){
-            i.putExtra("habitacion",5);
+            i.putExtra("habitacion",4);
         }else if (view.getId()==R.id.llSexto){
-
+            i.putExtra("habitacion",5);
+        }else if (view.getId()==R.id.llSeptimo){
+            i.putExtra("habitacion",6);
+        }else if (view.getId()==R.id.llOctavo){
+            i.putExtra("habitacion",7);
+        }else if (view.getId()==R.id.llNoveno){
+            i.putExtra("habitacion",8);
+        }else if (view.getId()==R.id.llDecimo){
+            i.putExtra("habitacion",9);
+        }else if (view.getId()==R.id.llUndecimo){
+            i.putExtra("habitacion",10);
+        }else if (view.getId()==R.id.llDuodecimo){
+            i.putExtra("habitacion",11);
         }
         getContext().startActivity(i);
     }
