@@ -22,12 +22,12 @@ import android.widget.ViewSwitcher;
 import com.multimedia.aes.controladorhotel.R;
 import com.multimedia.aes.controladorhotel.daos.HabitacionDAO;
 import com.multimedia.aes.controladorhotel.entidades.Habitacion;
+import com.multimedia.aes.controladorhotel.hilos.HiloSliderHabitacion;
 
 import java.sql.SQLException;
 
 public class Habitaciones extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
     private ImageSwitcher iswHabitacion;
-    private Button btnSiguiente,btnAnterior;
     private TextView txt1,txt2;
     private Bitmap imageSwitcherImages[] = new Bitmap[6];
     private int switcherImage = imageSwitcherImages.length;
@@ -36,6 +36,20 @@ public class Habitaciones extends AppCompatActivity implements View.OnClickListe
     private Habitacion habitacion;
     private float firstTouchX;
     private float firstTouchY;
+    private boolean play = true;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        new HiloSliderHabitacion(this).execute();
+    }
+
+    @Override
+    protected void onStop() {
+        play = false;
+        super.onStop();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,12 +66,8 @@ public class Habitaciones extends AppCompatActivity implements View.OnClickListe
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        btnAnterior=(Button)findViewById(R.id.btnAnterior);
-        btnSiguiente=(Button)findViewById(R.id.btnSiguiente);
         txt1 = (TextView)findViewById(R.id.txt1);
         txt2 = (TextView)findViewById(R.id.txt2);
-        btnAnterior.setOnClickListener(this);
-        btnSiguiente.setOnClickListener(this);
         iswHabitacion=(ImageSwitcher)findViewById(R.id.iswHabitacion);
         iswHabitacion.setOnTouchListener(this);
         iswHabitacion.setFactory(new ViewSwitcher.ViewFactory() {
@@ -81,31 +91,6 @@ public class Habitaciones extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if (view.getId()==R.id.btnAnterior){
-            if (counter == 0){
-                counter = switcherImage-1;
-            }else{
-                counter--;
-            }
-            Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_right);
-            Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
-            iswHabitacion.setOutAnimation(animationOut);
-            iswHabitacion.setInAnimation(animationIn);
-            Drawable drawable = new BitmapDrawable(getResources(), imageSwitcherImages[counter]);
-            iswHabitacion.setImageDrawable(drawable);
-        }else if (view.getId()==R.id.btnSiguiente){
-            if (counter == switcherImage-1){
-                counter = 0;
-            }else {
-                counter++;
-            }
-            Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
-            Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_left);
-            iswHabitacion.setOutAnimation(animationOut);
-            iswHabitacion.setInAnimation(animationIn);
-            Drawable drawable = new BitmapDrawable(getResources(), imageSwitcherImages[counter]);
-            iswHabitacion.setImageDrawable(drawable);
-        }
     }
     private Bitmap pasarBase64String(String encodedImage){
         byte[] decodedString = Base64.decode(encodedImage, Base64.DEFAULT);
@@ -113,6 +98,32 @@ public class Habitaciones extends AppCompatActivity implements View.OnClickListe
         return decodedByte;
     }
 
+    public void pasarSiguiente(){
+        if (counter == switcherImage-1){
+            counter = 0;
+        }else {
+            counter++;
+        }
+        Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
+        Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_left);
+        iswHabitacion.setOutAnimation(animationOut);
+        iswHabitacion.setInAnimation(animationIn);
+        Drawable drawable = new BitmapDrawable(getResources(), imageSwitcherImages[counter]);
+        iswHabitacion.setImageDrawable(drawable);
+    }
+    private void pasarAnterior(){
+        if (counter == 0){
+            counter = switcherImage-1;
+        }else{
+            counter--;
+        }
+        Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_right);
+        Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
+        iswHabitacion.setOutAnimation(animationOut);
+        iswHabitacion.setInAnimation(animationIn);
+        Drawable drawable = new BitmapDrawable(getResources(), imageSwitcherImages[counter]);
+        iswHabitacion.setImageDrawable(drawable);
+    }
     @Override
     public boolean onTouch(View view, MotionEvent event) {
         switch(event.getAction()){
@@ -124,29 +135,9 @@ public class Habitaciones extends AppCompatActivity implements View.OnClickListe
             case MotionEvent.ACTION_MOVE:
                 //Aqui ya podemos determinar los tipos de movimientos:
                 if(firstTouchX > event.getX()){
-                    if (counter == switcherImage-1){
-                        counter = 0;
-                    }else {
-                        counter++;
-                    }
-                    Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left);
-                    Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_left);
-                    iswHabitacion.setOutAnimation(animationOut);
-                    iswHabitacion.setInAnimation(animationIn);
-                    Drawable drawable = new BitmapDrawable(getResources(), imageSwitcherImages[counter]);
-                    iswHabitacion.setImageDrawable(drawable);
+                    pasarSiguiente();
                 }else{
-                    if (counter == 0){
-                        counter = switcherImage-1;
-                    }else{
-                        counter--;
-                    }
-                    Animation animationOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_right);
-                    Animation animationIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
-                    iswHabitacion.setOutAnimation(animationOut);
-                    iswHabitacion.setInAnimation(animationIn);
-                    Drawable drawable = new BitmapDrawable(getResources(), imageSwitcherImages[counter]);
-                    iswHabitacion.setImageDrawable(drawable);
+                    pasarAnterior();
                 }
                 if(firstTouchY > event.getY()){
                     //Hacia arriba
@@ -156,5 +147,13 @@ public class Habitaciones extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         return true;
+    }
+
+    public boolean isPlay() {
+        return play;
+    }
+
+    public void setPlay(boolean play) {
+        this.play = play;
     }
 }
